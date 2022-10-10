@@ -19,14 +19,37 @@
        <div class="Puneeth">
         <div class="Box">
             <img src="pics/logo2.jpeg" class="avtar" alt="logo">
-            <form class="InBox">
-                <h1>SignUp</h1>
-                <input type="text" class="input-box" placeholder="Roll Number">
-                <input type="password" class="input-box" placeholder="Password">
-                <input type="password" class="input-box" placeholder="Re-Enter Password">
-                <button>Register</button>
-            </form>
+            <form class="InBox" name="myform" method="post" onsubmit="return validateform()" >  
+                <center class="pip"><h2>SIGN-UP</h2></center>
+                <input class="input-box1" type="text" name="roll_no" placeholder="roll number"><br/>  
+                <input class="input-box2" type="password" name="password" placeholder="password"><br/> 
+                <input class="input-box3" type="password" name="pass" placeholder="re-enter password"><br/>  
+                <button class="b1" type="submit">Register</button> 
+                </form>  
         </div>
        </div>
+       <script>  
+        function validateform(){  
+            let x=document.forms["myform"]["roll_no"].value;
+            if(x==""){
+             alert("roll number can't be empty");
+             return false;
+            }
+            let y=document.forms["myform"]["password"].value;
+            if(y.length<8){
+             alert("Password must be atleast 8 characters");
+             return false;
+            }
+            let z=document.forms["myform"]["pass"].value;
+            if(z.length!=y.length || z!=y){
+                alert("re-entered password is not same as above password");
+                return false;
+            }
+            else {
+             alert("Registration successful");
+              return false;
+            }
+        }  
+        </script> 
 </body>
 </html>
