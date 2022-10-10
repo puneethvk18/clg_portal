@@ -79,11 +79,27 @@ h1 {
     color: white;
 }
 
-.input-box {
-    width: 80%;
-    margin-bottom: 20px;
-    margin-left: 6.9%;
-    padding: 2%;
+.input-box1 {
+    width: 70%;
+    margin-top: 10%;
+    margin-left: 12%;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.input-box2 {
+    width: 70%;
+    margin-top: 5%;
+    margin-left: 12%;
+    padding: 3%;
+    border-radius: 10px;
+}
+
+.input-box3 {
+    width: 70%;
+    margin-top: 5%;
+    margin-left: 12%;
+    padding: 3%;
     border-radius: 10px;
 }
 
@@ -102,4 +118,8 @@ h1 {
     color: white;
     transform: scale(1.2);
     transition: transform .2s;
+}
+
+.pip{
+    margin-top: 10%;
 }
