@@ -19,13 +19,33 @@
        <div class="Puneeth">
         <div class="Box">
             <img src="pics/logo2.jpeg" class="avtar" alt="logo">
-            <form class="InBox">
-                <h1>Login</h1>
-                <input type="text" class="input-box" placeholder="Roll Number">
-                <input type="password" class="input-box" placeholder="Password">
-                <button>Login</button>
-            </form>
+            <form class="InBox" name="myform" method="post" onsubmit=" return validateform()" >  
+                <center class="pip"><h2>LOGIN</h2></center>
+                <input class="input-box1" type="text" name="roll_no" placeholder="roll number"><br/>  
+                <input class="input-box2" type="password" name="password" placeholder="password"><br/>  
+                <button class="b1" type="submit">Login</button> 
+                <button class="b2">forget Password</button> 
+                </form>  
         </div>
        </div>
+
+       <script>  
+        function validateform(){  
+       let x=document.forms["myform"]["roll_no"].value;
+       if(x==""){
+        alert("roll number can't be empty");
+        return false;
+       }
+       let y=document.forms["myform"]["password"].value;
+       if(y.length<8){
+        alert("password must be atleast 8 characters");
+        return false;
+       }
+       else {
+        alert("login successful");
+         return false;
+       }
+        }  
+        </script>  
 </body>
 </html>
